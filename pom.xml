@@ -12,7 +12,7 @@
 	<groupId>com.test</groupId>
 	<artifactId>client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+	<packaging>war</packaging>
 	<name>client</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -50,6 +50,17 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.wildfly.plugins</groupId>
+				<artifactId>wildfly-maven-plugin</artifactId>
+				<version>1.0.2.Final</version>
+				<configuration>
+					<hostname>${hostname}</hostname>
+					<port>9990</port>
+					<username>wildfly</username>
+					<password>wildfly</password>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
